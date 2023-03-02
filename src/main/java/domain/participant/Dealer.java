@@ -16,6 +16,10 @@ public class Dealer extends Participant {
         }
     }
 
+    public boolean needsFillCards() {
+        return calculateScore() <= 16;
+    }
+
     public Card showInitialCard() {
         return this.cards.get(0);
     }

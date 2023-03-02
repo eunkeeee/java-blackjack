@@ -2,6 +2,7 @@ package domain.participant;
 
 import domain.card.Card;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Participant {
 
@@ -29,7 +30,9 @@ public class Participant {
         return name.getName();
     }
 
-    public List<Card> getCards() {
-        return cards;
+    public List<String> getCards() {
+        return cards.stream()
+                .map(card -> String.format("%s%s", card.getValue(), card.getShape()))
+                .collect(Collectors.toList());
     }
 }

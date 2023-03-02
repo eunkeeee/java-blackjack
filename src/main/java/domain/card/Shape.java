@@ -25,4 +25,9 @@ public enum Shape {
     public String getShape() {
         return shape;
     }
+
+    @Override
+    public String toString() {
+        return shape;
+    }
 }

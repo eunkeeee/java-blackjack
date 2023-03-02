@@ -40,4 +40,9 @@ public enum Value {
     public boolean isAce() {
         return this.equals(ACE);
     }
+
+    @Override
+    public String toString() {
+        return value;
+    }
 }
